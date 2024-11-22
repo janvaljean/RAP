@@ -1,5 +1,4 @@
 
- ```
   " Determination Part of Behaviour Definition
 
 behavior definition for zi_rap_flight alias Flight
@@ -24,7 +23,7 @@ lock master
   mapping for sflight {
     carrid    = carrid;
 ...
-  ```  
+ 
 ```abap
 METHOD setSeatsMax.
 
