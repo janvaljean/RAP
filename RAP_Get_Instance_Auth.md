@@ -2,7 +2,7 @@
 METHOD get_instance_authorizations.
 
   " Ekrandaki veriyi oku
-  READ ENTITIES OF zi_rap_flight
+  READ ENTITIES OF zi_sf_flight
     IN LOCAL MODE
     ENTITY Flight
     FIELDS ( status ) WITH CORRESPONDING #( keys )
@@ -62,7 +62,7 @@ METHOD get_instance_authorizations.
 
       APPEND VALUE #(
         %tky = <flight>-%tky
-        %msg = NEW zcm_rap_flight(
+        %msg = NEW zcm_sf_flight(
           severity = if_abap_behv_message=>severity-error
           textid = zcm_rap_flight=>no_auth
         )
