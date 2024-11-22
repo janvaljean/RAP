@@ -16,8 +16,9 @@ TRY.
 CATCH zcx_ec_guvenli_kayit INTO DATA(lx_exception).
   " Hata mesajını işle
 ENDTRY.
+```
+## Class
 ```abap
-
 CLASS zcx_ec_guvenli_kayit DEFINITION
   PUBLIC
   INHERITING FROM cx_static_check
