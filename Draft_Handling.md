@@ -1,16 +1,15 @@
-# Güvenli Kayıt İstisna Sınıfı (ZCX_EC_GUVENLI_KAYIT)
+#Behaviour Definition for draft table
 ```abap
 managed implementation in class zbp_i_rap_activity unique;
-```
-## with draft;
-```abap
+#### with draft;
+
 define behavior for ZI_RAP_ACTIVITY alias Activity
 persistent table ZRAP_ACTIV
-```
-## draft table ZRAP_ACTIVD
-## lock master total etag LastChangedAt
-## etag master LocalLastChangedAt
-```abap
+
+#### draft table ZRAP_ACTIVD
+#### lock master total etag LastChangedAt
+#### etag master LocalLastChangedAt
+
 create;
 update;
 delete;
