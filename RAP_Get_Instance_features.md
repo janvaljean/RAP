@@ -24,4 +24,28 @@ METHOD get_instance_features.
   ).
 
 ENDMETHOD.
+```
+```abap
+  METHOD get_instance_features.
+     " Read the active flag of the existing members
+    READ ENTITIES OF zi_team IN LOCAL MODE
+        ENTITY Team
+          FIELDS ( Active ) WITH CORRESPONDING #( keys )
+        RESULT DATA(members)
+        FAILED failed.
 
+    result =
+      VALUE #(
+        FOR member IN members
+      
+            LET status =   COND #( WHEN member-Active = abap_true
+                                      THEN if_abap_behv=>fc-o-disabled
+                                      ELSE if_abap_behv=>fc-o-enabled  )
+
+                                      IN
+
+
+            ( %tky                 = member-%tky
+              %action-setActive = status
+             ) ).
+  ENDMETHOD.
