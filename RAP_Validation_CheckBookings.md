@@ -26,9 +26,9 @@ DATA :
   LV_ANZAHL     TYPE I.
 
 
-## Code
 
-```abap
+
+
 METHOD CHECKBOOKINGS.
 
   DATA :
